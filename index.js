@@ -1,81 +1,58 @@
-// const dodger = document.getElementById("dodger");
-// dodger.style.backgroundColor = "#FF69B4";
-
-// function moveDodgerLeft() {
-//     const leftNumbers = dodger.style.left.replace("px", "");
-//     const left = parseInt(leftNumbers, 10);
-
-//     if (left > 0) {
-//         dodger.style.left = `${left - 1}px`;
-//     }
-// }
-
-// function moveDodgerRight() {
-//     const rightNumbers = dodger.style.left.replace("px", "");
-//     const right = parseInt(rightNumbers, 10);
-
-//     if (right < 360) {
-//         dodger.style.left = `${right + 1}px`;
-//     }
-// }
-
-// document.addEventListener("keydown", function (e) {
-//     if (e.key === "ArrowRight") {
-//         moveDodgerRight();
-//     }
-// });
-
-// document.addEventListener("keydown", function (e) {
-//     if (e.key === "ArrowLeft") {
-//         moveDodgerLeft();
-//     }
-// });
-
 const topCupcakesList = [
     {
-        name: "",
+        name: "Best Flavors",
         img: "./img/Cupcake-1.jpg",
-        description: "",
+        description: "This is a list of all the cupcake flavors that you should try.",
     },
     {
-        name: "Creamcheese",
-        img: "./img/creamCheese.jpg",
-        description: "Here is a cupcake",
+        name: "Red Velvet and Cream Cheese",
+        img: "./img/red-velvet.jpg",
+        description: "A always popular cupcake that can be found at any establishment.",
     },
     {
-        name: "Creamcheese",
-        img: "./img/Cupcake-1.jpg",
-        description: "Here is a cupcake",
+        name: "Chocolate Peanut Butter",
+        img: "./img/Chocolate-with-Peanut-Butter.jpg",
+        description: "Taking all the advantages of chocolate, and adding peanut butter into the mix.",
     },
     {
-        name: "Creamcheese",
-        img: "./img/Cupcake-1.jpg",
-        description: "Here is a cupcake",
+        name: "Cookies and Cream",
+        img: "./img/Cookies-and-Cream.jpg",
+        description: "A classic flavor that tastes good no matter if it's ice cream or cupcakes.",
     },
     {
-        name: "Creamcheese",
-        img: "./img/Cupcake-1.jpg",
-        description: "Here is a cupcake",
+        name: "Salted Caramel",
+        img: "./img/salted-caremel.jpg",
+        description: "You'll either love it or hate it, there is no in-between.",
     },
     {
-        name: "Creamcheese",
-        img: "./img/Cupcake-1.jpg",
-        description: "Here is a cupcake",
+        name: "Chocolate",
+        img: "./img/chocolate.jpg",
+        description: "Simple and delicious.  This cupcake will never go out of style.",
     },
     {
-        name: "Creamcheese",
-        img: "./img/Cupcake-1.jpg",
-        description: "Here is a cupcake",
+        name: "Lemon",
+        img: "./img/lemon.jpg",
+        description: "A perfect cupcake for a hot summer day.  It tastes healthy and refreshing.",
     },
     {
-        name: "Creamcheese",
-        img: "./img/Cupcake-1.jpg",
-        description: "Here is a cupcake",
+        name: "Cinnamon",
+        img: "./img/cinimon.jpg",
+        description: "A cupcake that you cannot go wrong with.  It tastes like it sounds, great.",
     },
     {
-        name: "Creamcheese",
-        img: "./img/Cupcake-1.jpg",
-        description: "Here is a cupcake",
+        name: "Pumpkin",
+        img: "./img/pumpkin.jpg",
+        description: "A great cupcake for the fall.",
+    },
+    {
+        name: "Raspberry",
+        img: "./img/raspberry.jpg",
+        description: "A good cupcake to pair with lemon cupcakes on summer days.",
+    },
+    {
+        name: "Vanilla",
+        img: "./img/Vanilla.jpg",
+        description: "The classic cupcake that will be around as long as cupcakes exist.",
     },
 ];
 
@@ -85,7 +62,11 @@ const cupImg = document.getElementById("cupImg");
 const cupDisc = document.getElementById("cupDisc");
 
 function setToPage(pageNum) {
-    cupName.innerHTML = topCupcakesList[pageNum].name;
+    if (topCupcakesList[pageNum].name != "") {
+        cupName.innerHTML = "Flavor: " + topCupcakesList[pageNum].name + " Cupcakes!";
+    } else {
+        cupName.innerHTML = "";
+    }
     cupDisc.innerHTML = topCupcakesList[pageNum].description;
     cupImg.src = topCupcakesList[pageNum].img;
 }
@@ -93,19 +74,23 @@ function setToPage(pageNum) {
 setToPage(0);
 
 function nextPage() {
-    currentPage++;
-    setToPage(currentPage);
+    if (currentPage < 10) {
+        currentPage++;
+        setToPage(currentPage);
+    }
 }
 
 function backPage() {
-    currentPage--;
-    setToPage(currentPage);
+    if (currentPage > 0) {
+        currentPage--;
+        setToPage(currentPage);
+    }
 }
 
-document.getElementById("nextbutton").addEventListener("click", function () {
+document.getElementById("nextButton").addEventListener("click", function () {
     nextPage();
 });
 
-document.getElementById("backbutton").addEventListener("click", function () {
+document.getElementById("backButton").addEventListener("click", function () {
     backPage();
 });

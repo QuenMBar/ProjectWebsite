@@ -1,0 +1,115 @@
+body {
+    background-image: url("./img/background.jpeg");
+    background-size: cover;
+}
+
+#mainContent {
+    width: 60vw;
+    height: 70vh;
+    margin: auto;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    border: 20px solid teal;
+    background-color: rgb(31, 31, 31);
+}
+
+#cupImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50vh;
+}
+
+h1,
+h2,
+#cupDisc {
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    color: black;
+    font-family: Tahoma,
+    Geneva,
+    sans-serif;
+    font-size: 40px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    font-weight: 700;
+    text-decoration: none solid rgb(232, 230, 227);
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+b {
+    font-family: Impact,
+    Charcoal,
+    sans-serif;
+    font-size: 40px;
+    letter-spacing: 3px;
+    word-spacing: 0px;
+    font-weight: 400;
+    text-decoration: underline solid rgb(232, 230, 227);
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+h2 {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 25px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    font-weight: 400;
+    text-decoration: none solid rgb(232, 230, 227);
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+p {
+    font-family: Tahoma,
+    Geneva,
+    sans-serif;
+    font-size: 14px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    font-weight: 400;
+    text-decoration: none solid rgb(232, 230, 227);
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+#buttons {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.myButton {
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    line-height: 14px;
+    padding: 4px;
+    border-radius: 15px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    background-image: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    display: inline-block;
+    width: 100px;
+}
+
+.myButton:hover {
+    background: #b4b4b4;
+}
+
+.myButton:active {
+    background: #777777;
+}
